@@ -6,7 +6,7 @@ interface CampProps{
   backgroundImage:string;
   title:string;
   subtitle:string;
-  peopleJoined:string;
+  peopleJoined?:string;
 }
 
 
@@ -51,12 +51,13 @@ const CampSite = ({backgroundImage,title,subtitle,peopleJoined}:CampProps) => {
           key={url}
           width={52}
           height={52}
+          alt='image'
           />
         ) )}
 
         </span>
 
-        <p className='bold-16 md:bold-20 text-white'>People Joined</p>
+        <p className='bold-16 md:bold-20 text-white'>{peopleJoined}</p>
         </div>
 
       </div>
